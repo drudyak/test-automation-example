@@ -80,6 +80,6 @@ abstract class IPageObject {
 
     protected void waitForPageLoad() {
         new WebDriverWait(driver, 30).until((ExpectedCondition<Boolean>) wd ->
-                ("complete".equals(((JavascriptExecutor) wd).executeScript("return document.readyState"))));
+                "complete".equals(((JavascriptExecutor) wd).executeScript("return document.readyState")));
     }
 }
